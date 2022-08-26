@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+.betweenVoid:empty::before{
+  content: "\200b";
+}
