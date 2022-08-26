@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import '../components/calculate/Stats.css'
-import { AppProps } from 'next/app'
 import {SessionProvider} from 'next-auth/react'
 
 function MyApp({ Component, pageProps : {session, ...pageProps}}) {
