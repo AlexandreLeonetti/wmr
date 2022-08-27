@@ -5,10 +5,10 @@ function SaveLevel (props) {
 
         const {data : session}                   =   useSession()               ;
         const [input        , setInput      ]    =   useState('')               ;
-        const [country      , setCountry    ]    =   useState<string>('')       ;
-    	const [level        , setLevel      ]    =   useState<number>(null)         ;
-        const [blockPlayer  , setBlockPlayer]    =   useState<boolean>(false)   ;
-        const [nameOfPlayer , setName       ]    =   useState<string>('')       ;
+        const [country      , setCountry    ]    =   useState('')       ;
+    	const [level        , setLevel      ]    =   useState(null)         ;
+        const [blockPlayer  , setBlockPlayer]    =   useState(false)   ;
+        const [nameOfPlayer , setName       ]    =   useState('')       ;
         /*const postPlayer                    =    async () => {
                                                     const playerInfo: PlayerBody = {
                                                         username: session?.user.name || 'Unkown User',
