@@ -65,7 +65,7 @@ model User {
   name          String?
   country            String
   continent          String
-  level              String
+  level              Int 
   email         String?   @unique
   emailVerified DateTime?
   image         String?
