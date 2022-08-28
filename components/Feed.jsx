@@ -32,8 +32,6 @@ function Feed() {
     }
     }
 
-    
-
 
     const handleRefresh = async () => {
         const refreshToast = toast.loading('Refreshing...');
@@ -44,6 +42,7 @@ function Feed() {
             id: refreshToast,
         })
     }
+
     
     return(
        <>
@@ -78,7 +77,7 @@ function Feed() {
 
         <div>
                  <div className="flex flex-col space-x-3 boder-gray-100 py-1 px-5 md:px-1"> 
-                   <div className=" grid grid-cols-4 md:grid-cols-5">
+                   <div className=" grid grid-cols-3 md:grid-cols-4">
                          <div className="items-center space-x-3 text-gray-600 font-bold">
                                 #
                             </div>
@@ -91,9 +90,9 @@ function Feed() {
                         <div className=" flex justify-end items-center space-x-3 text-gray-600 font-bold">
 			                  Level 
                         </div>
-                        <div className=" hidden md:flex justify-end items-center space-x-3 text-gray-600 font-bold">
+                        {/*<div className=" hidden md:flex justify-end items-center space-x-3 text-gray-600 font-bold">
                                Last Updated     
-                        </div> 
+                        </div>*/} 
                     </div>
                     
 
