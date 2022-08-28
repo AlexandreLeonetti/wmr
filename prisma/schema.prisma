@@ -46,6 +46,9 @@ model Account {
   scope              String?
   id_token           String?  @db.Text
   session_state      String?
+  country            String
+  continent          String
+  level              String
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
