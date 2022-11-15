@@ -15,6 +15,7 @@
     "@prisma/studio": "^0.472.0",
     "next": "latest",
     "next-auth": "^4.10.3",
+    "nodemailer": "^6.8.0",
     "prisma": "^4.2.1",
     "react": "18.1.0",
     "react-country-flag": "^3.0.2",
