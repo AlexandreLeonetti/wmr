@@ -63,8 +63,8 @@ model Session {
 model User {
   id            String    @id @default(cuid())
   name          String?
-  country            String
-  level              Int 
+ // country            String
+  //level              Int 
   email         String?   @unique
   emailVerified DateTime?
   image         String?
