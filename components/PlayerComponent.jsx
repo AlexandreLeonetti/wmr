@@ -15,7 +15,7 @@ useEffect(() => {
 		},[]);
         return (
                 <div className=" space-x-3 border-t boder-gray-100 py-1 px-5 md:px-1"> 
-                   <div className=" grid grid-cols-3 md:grid-cols-4">
+                   <div className=" grid grid-cols-4 md:grid-cols-4">
                         <div className="">{index+1}</div>
                         <div className=" items-center text-gray-400">
                         

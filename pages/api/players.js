@@ -20,7 +20,8 @@ export default async function handler(req, res) {
 async function readPlayers(req, res){
   const body = req.body;
   try{
-    const allplayers= await prisma.players.findMany();
+ //    const allplayers= await prisma.players.findMany();
+   const allplayers= await prisma.players.findMany({orderBy:[{level:'desc'},]});
     return res.status(200).json(allplayers, {success:true});
   }catch (error) {
     console.log(error)

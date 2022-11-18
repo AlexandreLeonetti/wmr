@@ -23,6 +23,10 @@ function Feed() {
            headers: {"Content-Type": "application/json"}
       });
       setPlayers(await response.json());
+/*        console.log("players");
+        console.log(await response);
+        console.log(await response.json());*/
+       // console.log(players);
       if (response.status !== 200){
         console.log("something went wrong"+response);
        } else {
@@ -36,6 +40,8 @@ function Feed() {
     const handleRefresh = async () => {
         const refreshToast = toast.loading('Refreshing...');
         const players = await fetchPlayers();
+        console.log("players");
+        setTimeout(()=>{console.log(players)},3000);
            // setPlayers(players);
         toast.success('Feed updated !',{
 
@@ -77,7 +83,7 @@ function Feed() {
 
         <div>
                  <div className="flex flex-col space-x-3 boder-gray-100 py-1 px-5 md:px-1"> 
-                   <div className=" grid grid-cols-3 md:grid-cols-4">
+                   <div className=" grid grid-cols-4 md:grid-cols-4">
                          <div className="items-center space-x-3 text-gray-600 font-bold">
                                 #
                             </div>
@@ -99,7 +105,9 @@ function Feed() {
                </div>
        {players?.map((player, index) => (
         <PlayerComponent index={index} key={player.id} player={player} />
-        ))}
+        ))
+
+       }
     </div>
     </div>
     <div></div>
