@@ -9,7 +9,7 @@ function SaveLevel (props) {
     	const [level        , setLevel      ]    =   useState(null)         ;
         const [blockPlayer  , setBlockPlayer]    =   useState(false)   ;
         const [nameOfPlayer , setName       ]    =   useState('')       ;
-        /*const postPlayer                    =    async () => {
+        const postPlayer                    =    async () => {
                                                     const playerInfo: PlayerBody = {
                                                         username: session?.user.name || 'Unkown User',
                                                         country : country ,
@@ -18,7 +18,7 @@ function SaveLevel (props) {
                                                     } 
 		                                            setCountry('_');
         
-                                                    const result   =    await fetch(`/api/addPlayer`, {
+                                                    const result   =    await fetch(`/api/updateLevel`, {
                                                         body: JSON.stringify(playerInfo),
                                                         method:'POST',
                                                     })
@@ -34,7 +34,7 @@ function SaveLevel (props) {
                                                 }
  
 
-*/
+
 
     const displayUsrContent = () => {
            const playerData = [country, props.level, nameOfPlayer, session.user.name]
@@ -64,7 +64,7 @@ function SaveLevel (props) {
 			</ul>
 
     	<In 
-               onClick={session ? ()=> displayUsrContent() : signIn}
+               onClick={session ? ()=> postPlayer() : signIn}
                title={session ? 'Log Out' : 'Log In'}    
 
 		/> 
