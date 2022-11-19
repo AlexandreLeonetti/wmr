@@ -10,7 +10,7 @@ function SaveLevel (props) {
         const [blockPlayer  , setBlockPlayer]    =   useState(false)   ;
         const [nameOfPlayer , setName       ]    =   useState('')       ;
         const postPlayer                    =    async () => {
-                                                    const playerInfo: PlayerBody = {
+/*                                                    const playerInfo: PlayerBody = {
                                                         username: session?.user.name || 'Unkown User',
                                                         country : country ,
                                                         level :  parseInt(level) ,
@@ -30,7 +30,7 @@ function SaveLevel (props) {
                                                     toast('Player Posted', {
                                                                         icon:''
                                                                 })
-                                                    return jsonData;
+                                                    return jsonData;*/
                                                 }
  
 
