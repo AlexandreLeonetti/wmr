@@ -47,3 +47,6 @@ async function addPlayer(req, res) {
                       res.status(500).json({ error: "Error adding player", success:false });
                   }
 }
+
+
+/* if player already exist then, select player where email equals session email, update level of this player.*/
