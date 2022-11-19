@@ -43,14 +43,14 @@ function SaveLevel (props) {
         
     }
     return (
+       <>
         {/*if session true then have both log out and save level buttonsm
             call postPlayer with country level and so on with email as well
            the postPlayer function calls the api/addPlayer function. 
            should simply update if player already exist.
 
             */}
-        <>
-
+ 
         	<ul className="text-sm">
 				<li className="grid grid-cols-2 h-12 mx-6 border-b border-gray-200 dark:border-gray-700 py-3 ">
 					<div className="col-span-1" >Score </div><div className="col-span-1 text-right"> {nameOfPlayer}</div> </li>
