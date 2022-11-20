@@ -22,27 +22,27 @@ function SaveLevel (props) {
 
         const postPlayer                    =    async () => {
             console.log("postPlayer");
-/*                                                    const playerInfo: PlayerBody = {
+                                                    const playerInfo: PlayerBody = {
                                                         username: session?.user.name || 'Unkown User',
                                                         country : country ,
                                                         level :  parseInt(level) ,
                                                         blockPlayer : blockPlayer,
                                                     } 
-		                                            setCountry('_');
+		                                            setCountry('fr');
         
                                                     const result   =    await fetch(`/api/updateLevel`, {
                                                         body: JSON.stringify(playerInfo),
                                                         method:'POST',
                                                     })
                 
-                                                    const jsonData = await result.json();
-                                                    const newPlayers = await fetchPlayers();
-                                                    setPlayers(newPlayers)
+                                                    //const jsonData = await result.json();
+                                                    //const newPlayers = await fetchPlayers();
+                                                    //setPlayers(newPlayers)
 
-                                                    toast('Player Posted', {
+                                                    toast(Level Posted', {
                                                                         icon:''
                                                                 })
-                                                    return jsonData;*/
+                                                    return jsonData;
                                                 }
  
 
