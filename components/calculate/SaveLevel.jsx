@@ -36,7 +36,7 @@ function SaveLevel (props) {
                                                         method:'POST',
                                                     })
                 
-                                                    //const jsonData = await result.json();
+                                                    const jsonData = await result.json();
                                                     //const newPlayers = await fetchPlayers();
                                                     //setPlayers(newPlayers)
 
