@@ -14,6 +14,7 @@ export default async function handler(req, res) {
 
 async function updatePlayer (req, res) {
     const body = req.body;
+    console.log(body);
     try {
         const newEntry = await prisma.players.upsert({
                          where : {
@@ -35,7 +36,9 @@ async function updatePlayer (req, res) {
                 return res.status(200).json(newEntry, {success: true});
         } catch (error) {
                       console.error("Request error", error);
-                      res.status(500).json({ error: "Error adding player", success:false });
+//                      res.status(500).json({ error: "Error adding player", success:false });
+                      res.status(500).json({ error: body , success:false });
+
         }
 }
 
