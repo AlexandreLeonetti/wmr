@@ -12,7 +12,7 @@ export default NextAuth({
   adapter: PrismaAdapter(prisma),
   // Configure one or more authentication providers
   providers: [
-/*    GithubProvider({
+    GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
@@ -35,7 +35,7 @@ export default NextAuth({
 				},
 			},
 			from: process.env.EMAIL_FROM,
-		}), */
+		}), 
     // ...add more providers here
   ],
 secret: process.env.NEXTAUTH_SECRET,
