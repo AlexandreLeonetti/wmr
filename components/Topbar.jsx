@@ -26,6 +26,7 @@ function Topbar (  Props) {
     useEffect(() => {
         fetchPlayers();
         handler();
+        console.log("players fetched, and gotSession");
     },[])
 
 const fetchPlayers = async() => {
@@ -41,12 +42,12 @@ const fetchPlayers = async() => {
         } else {
         }
     } catch (error) {
-  console.log("there was an error reading from the db, " , error)
+        console.log("there was an error reading from the db, " , error)
+    }
 }
-}
 
 
-
+    console.log("topbar rendered");
     console.log({data:session});
     
 
