@@ -25,21 +25,22 @@ function Topbar (  Props) {
     const[players, setPlayers]=useState(null);
     useEffect(() => {
         fetchPlayers();
+        handler();
     },[])
 
 const fetchPlayers = async() => {
-console.log("fetching players");
-try {
-  const response = await fetch ("/api/players", {
-       method: "GET",
-       headers: {"Content-Type": "application/json"}
-  });
-  setPlayers(await response.json());
-  if (response.status !== 200){
-    console.log("something went wrong"+response);
-   } else {
-   }
-} catch (error) {
+    console.log("fetching players");
+    try {
+        const response = await fetch ("/api/players", {
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        });
+        setPlayers(await response.json());
+        if (response.status !== 200){
+            console.log("something went wrong"+response);
+        } else {
+        }
+    } catch (error) {
   console.log("there was an error reading from the db, " , error)
 }
 }
@@ -47,7 +48,6 @@ try {
 
 
     console.log({data:session});
-    handler()
     
 
       return(
