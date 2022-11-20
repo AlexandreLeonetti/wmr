@@ -21,6 +21,7 @@ function SaveLevel (props) {
 
 
         const postPlayer                    =    async () => {
+            console.log("postPlayer");
 /*                                                    const playerInfo: PlayerBody = {
                                                         username: session?.user.name || 'Unkown User',
                                                         country : country ,
