@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import In from './In';
+import {toast} from 'react-hot-toast';
 function SaveLevel (props) {
 
         const {data : session}                   =   useSession()               ;
