@@ -39,9 +39,9 @@ function SaveLevel (props) {
                                                     //const newPlayers = await fetchPlayers();
                                                     //setPlayers(newPlayers)
 
-                                                    toast(Level Posted', {
+                                                    toast('Level Posted', {
                                                                         icon:''
-                                                                })
+                                                                });
                                                     return jsonData;
                                                 }
  
