@@ -9,6 +9,17 @@ function SaveLevel (props) {
     	const [level        , setLevel      ]    =   useState(null)         ;
         const [blockPlayer  , setBlockPlayer]    =   useState(false)   ;
         const [nameOfPlayer , setName       ]    =   useState('')       ;
+
+
+        useEffect(() => {
+
+
+            console.log("rendered saveLevel");
+
+        },[]);
+
+
+
         const postPlayer                    =    async () => {
 /*                                                    const playerInfo: PlayerBody = {
                                                         username: session?.user.name || 'Unkown User',
