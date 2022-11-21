@@ -37,10 +37,10 @@ async function updatePlayer (req, res) {
         
                 const newEntry = await prisma.players.create({
                               data: {
-                                                username: body.username,
-                                                email: body.email,
-                                                country: body.country,
-                                                level:   body.level,
+                                                username: "testUsername",
+                                                email: "test@test",
+                                                country: "country",
+                                                level:   1,
                                             }
                           });
                 return res.status(200).json(newEntry, {success: true});
