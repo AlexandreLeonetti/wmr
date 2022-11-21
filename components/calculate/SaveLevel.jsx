@@ -23,13 +23,14 @@ function SaveLevel (props) {
 
         const postPlayer                    =    async () => {
             console.log("postPlayer");
+            
+		                                            setCountry('fr');
                                                     const playerInfo = {
                                                         username: session?.user.name || 'Unkown User',
+                                                        username: session?.user.email,
                                                         country : country ,
                                                         level :  parseInt(level) ,
-                                                        blockPlayer : blockPlayer,
                                                     } 
-		                                            setCountry('fr');
         
                                                     const result   =    await fetch(`/api/updateLevel`, {
                                                         body: JSON.stringify(playerInfo),

@@ -5,7 +5,7 @@ model players{
     email    String @db.VarChar(255)
     level    Int
     
-    @@unique([email])
+    @@unique([email, id])
 }
 
 

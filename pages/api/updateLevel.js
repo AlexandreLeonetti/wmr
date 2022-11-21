@@ -27,7 +27,6 @@ async function updatePlayer (req, res) {
 
                                                 username: body.username,
                                                 email: body.email,
-                                                password: body.password,
                                                 country: body.country,
                                                 level:   body.level,
  
