@@ -14,6 +14,7 @@ export default async function handler(req, res) {
 
 async function updatePlayer (req, res) {
     const body = req.body;
+    console.log("in API");
     console.log(body);
     try {
         const newEntry = await prisma.players.upsert({
