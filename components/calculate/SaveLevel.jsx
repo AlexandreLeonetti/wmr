@@ -31,12 +31,12 @@ function SaveLevel (props) {
                                                         country : country ,
                                                         level :  parseInt(level) ,
                                                     } 
-        
+                                                    console.log(playerInfo);        
                                                     const result   =    await fetch(`/api/updateLevel`, {
                                                         body: JSON.stringify(playerInfo),
                                                         method:'POST',
                                                     })
-                
+                                                     
                                                     const jsonData = await result.json();
                                                     //const newPlayers = await fetchPlayers();
                                                     //setPlayers(newPlayers)
