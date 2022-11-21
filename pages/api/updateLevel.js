@@ -17,7 +17,7 @@ async function updatePlayer (req, res) {
     console.log("in API");
     console.log(body);
     try {
-/*        const newEntry = await prisma.players.upsert({
+        const newEntry = await prisma.players.upsert({
                          where : {
                                                 email: body.email,
                                },
@@ -26,15 +26,15 @@ async function updatePlayer (req, res) {
                          },
                          create:{
 
-                                                username: body.username,
-                                                email: body.email,
-                                                country: body.country,
-                                                level:   body.level,
+                                                username: "test2",
+                                                email: "email",
+                                                country: "test",
+                                                level:   2,
  
                          },
                           });
-                return res.status(200).json(newEntry, {success: true});*/
-        
+                return res.status(200).json(newEntry, {success: true});
+/*        
                 const newEntry = await prisma.players.create({
                               data: {
                                                 username: "testUsername",
@@ -42,7 +42,7 @@ async function updatePlayer (req, res) {
                                                 country: "country",
                                                 level:   1,
                                             }
-                          });
+                          });*/
                 return res.status(200).json(newEntry, {success: true});
 
 
