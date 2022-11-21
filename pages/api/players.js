@@ -36,7 +36,6 @@ async function addPlayer(req, res) {
                               data: {
                                                 username: body.username,
                                                 email: body.email,
-                                                password: body.password,
                                                 country: body.country,
                                                 level:   body.level
                                             }

@@ -31,13 +31,13 @@ async function updatePlayer (req, res) {
                                                 country: body.country,
                                                 level:   body.level,
  
-                         }
+                         },
                           });
                 return res.status(200).json(newEntry, {success: true});
         } catch (error) {
                       console.error("Request error", error);
-//                      res.status(500).json({ error: "Error adding player", success:false });
-                      res.status(500).json({ error: body , success:false });
+                      res.status(500).json({ error: "Error adding player", success:false });
+//                      res.status(500).json({ error: body , success:false });
 
         }
 }
