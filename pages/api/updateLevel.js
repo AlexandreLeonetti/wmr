@@ -17,7 +17,7 @@ async function updatePlayer (req, res) {
     console.log("in API");
     console.log(body);
     try {
-        const newEntry = await prisma.players.upsert({
+/*        const newEntry = await prisma.players.upsert({
                          where : {
                                                 email: body.email,
                                },
@@ -33,8 +33,21 @@ async function updatePlayer (req, res) {
  
                          },
                           });
+                return res.status(200).json(newEntry, {success: true});*/
+        
+                const newEntry = await prisma.players.create({
+                              data: {
+                                                username: body.username,
+                                                email: body.email,
+                                                country: body.country,
+                                                level:   body.level,
+                                            }
+                          });
                 return res.status(200).json(newEntry, {success: true});
+
+
         } catch (error) {
+
                       console.error("Request error", error);
                       res.status(500).json({ error: "Error adding player", success:false });
 //                      res.status(500).json({ error: body , success:false });
