@@ -27,7 +27,7 @@ function SaveLevel (props) {
 		                                            setCountry('fr');
                                                     const playerInfo = {
                                                         username: session?.user.name || 'Unkown User',
-                                                        username: session?.user.email,
+                                                        email : session?.user.email,
                                                         country : country ,
                                                         level :  parseInt(level) ,
                                                     } 
