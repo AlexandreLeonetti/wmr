@@ -1,0 +1,21 @@
+[POST] /api/updateLevel
+18:32:02:27
+{"username":"Alexandre","country":"fr","level":null,"blockPlayer":false}
+2022-11-20T17:32:02.328Z    d1022b0b-2762-413e-89df-22bc25b70f80    ERROR   Request error PrismaClientValidationError: Argument where of type playersWhereUniqueInput needs at least one argument.
+Argument username for create.username is missing.
+Argument country for create.country is missing.
+Argument email for create.email is missing.
+Argument password for create.password is missing.
+Argument level for create.level is missing.
+    at Document.validate (/var/task/node_modules/@prisma/client/runtime/index.js:27354:20)
+    at serializationFn (/var/task/node_modules/@prisma/client/runtime/index.js:29815:19)
+    at runInChildSpan (/var/task/node_modules/@prisma/client/runtime/index.js:23564:12)
+    at PrismaClient._executeRequest (/var/task/node_modules/@prisma/client/runtime/index.js:29822:31)
+    at consumer (/var/task/node_modules/@prisma/client/runtime/index.js:29751:23)
+    at /var/task/node_modules/@prisma/client/runtime/index.js:29756:51
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at /var/task/node_modules/@prisma/client/runtime/index.js:29756:29
+    at runInChildSpan (/var/task/node_modules/@prisma/client/runtime/index.js:23564:12)
+    at PrismaClient._request (/var/task/node_modules/@prisma/client/runtime/index.js:29753:22) {
+  clientVersion: '4.2.1'
+}
