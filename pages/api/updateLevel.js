@@ -19,10 +19,10 @@ async function updatePlayer (req, res) {
     try {
         const newEntry = await prisma.players.upsert({
                          where : {
-                                                email: body.email,
+                                                email: "email",
                                },
                          update: {
-                                                level: body.level,
+                                                level: 2,
                          },
                          create:{
 
@@ -31,7 +31,7 @@ async function updatePlayer (req, res) {
                                                 country: "test",
                                                 level:   2,
  
-                         },
+                         }
                           });
                 return res.status(200).json(newEntry, {success: true});
 /*        
