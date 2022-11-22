@@ -1,11 +1,10 @@
 model players{
-    id Int @id @default(autoincrement())
+    id Int @id @default(autoincrement()) @unique
     username String @db.VarChar(255)
     country  String @db.VarChar(255)
-    email    String @db.VarChar(255)
+    email    String @db.VarChar(255) @unique
     level    Int
     
-    @@unique([email, id])
 }
 
 

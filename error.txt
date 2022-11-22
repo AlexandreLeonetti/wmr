@@ -19,3 +19,47 @@ Argument level for create.level is missing.
     at PrismaClient._request (/var/task/node_modules/@prisma/client/runtime/index.js:29753:22) {
   clientVersion: '4.2.1'
 }
+
+==============================NEW CODE AND NEW ERROR :
+
+    try {
+        const newEntry = await prisma.players.upsert({
+                         where : {
+                                                email: "email",
+                               },
+                         update: {
+                                                level: 2,
+                         },
+                         create:{
+
+                                                username: "test2",
+                                                email: "email",
+                                                country: "test",
+                                                level:   2,
+ 
+                         }
+                         });
+                return res.status(200).json(newEntry, {success: true});
+
+
+in API
+{"username":"Alexandre","email":"alexandre.leonetti1@gmail.com","country":"fr","level":null}
+2022-11-22T08:03:20.445Z    069e8cac-994c-4d1f-8c2e-5d31fd44eec7    
+ERROR   Request error PrismaClientValidationError: Unknown arg `email` in where.
+email for type playersWhereUniqueInput. 
+Did you mean `email_id`?
+    at Document.validate (/var/task/node_modules/@prisma/client/runtime/index.js:27354:20)
+    at serializationFn (/var/task/node_modules/@prisma/client/runtime/index.js:29815:19)
+    at runInChildSpan (/var/task/node_modules/@prisma/client/runtime/index.js:23564:12)
+    at PrismaClient._executeRequest (/var/task/node_modules/@prisma/client/runtime/index.js:29822:31)
+    at consumer (/var/task/node_modules/@prisma/client/runtime/index.js:29751:23)
+    at /var/task/node_modules/@prisma/client/runtime/index.js:29756:51
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at /var/task/node_modules/@prisma/client/runtime/index.js:29756:29
+    at runInChildSpan (/var/task/node_modules/@prisma/client/runtime/index.js:23564:12)
+    at PrismaClient._request (/var/task/node_modules/@prisma/client/runtime/index.js:29753:22) {
+  clientVersion: '4.2.1'
+}
+
+
+
