@@ -14,9 +14,13 @@ export default async function handler(req, res) {
 
 async function updatePlayer (req, res) {
     const body = req.body;
+    body.level=7;
     console.log("in API");
     console.log(body);
     try {
+        console.log("body.email"+body.email);
+        console.log("body.level"+body.level);
+        console.log("body.username"+body.username);
         const newEntry = await prisma.players.upsert({
                          where : {
                                                 email: body.email,
@@ -26,7 +30,7 @@ async function updatePlayer (req, res) {
                          },
                          create:{
 
-                                                username: body.email,
+                                                username: body.username,
                                                 email: body.email,
                                                 country: body.country,
                                                 level: body.level   ,

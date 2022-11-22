@@ -20,6 +20,55 @@ Argument level for create.level is missing.
   clientVersion: '4.2.1'
 }
 
+================================================== Body.email error
+
+async function updatePlayer (req, res) {
+    const body = req.body;
+    console.log("in API");
+    console.log(body);
+    try {
+        const newEntry = await prisma.players.upsert({
+                         where : {
+                                                email: body.email,
+                               },
+                         update: {
+                                                level: body.level,
+                         },
+                         create:{
+
+                                                username: body.email,
+                                                email: body.email,
+                                                country: body.country,
+                                                level: body.level   ,
+ 
+                         }
+                          });
+                return res.status(200).json(newEntry, {success: true});
+
+
+[POST] /api/updateLevel
+10:33:11:54
+in API
+{"username":"Alexandre","email":"alexandre.leonetti1@gmail.com","country":"fr","level":null}
+2022-11-22T09:33:11.604Z    d2b82ee9-84bf-4bdb-829c-f1f0991a4a56    ERROR   Request error PrismaClientValidationError: Argument where of type playersWhereUniqueInput needs at least one argument.
+Argument username for create.username is missing.
+Argument country for create.country is missing.
+Argument email for create.email is missing.
+Argument level for create.level is missing.
+    at Document.validate (/var/task/node_modules/@prisma/client/runtime/index.js:27354:20)
+    at serializationFn (/var/task/node_modules/@prisma/client/runtime/index.js:29815:19)
+    at runInChildSpan (/var/task/node_modules/@prisma/client/runtime/index.js:23564:12)
+    at PrismaClient._executeRequest (/var/task/node_modules/@prisma/client/runtime/index.js:29822:31)
+    at consumer (/var/task/node_modules/@prisma/client/runtime/index.js:29751:23)
+    at /var/task/node_modules/@prisma/client/runtime/index.js:29756:51
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at /var/task/node_modules/@prisma/client/runtime/index.js:29756:29
+    at runInChildSpan (/var/task/node_modules/@prisma/client/runtime/index.js:23564:12)
+    at PrismaClient._request (/var/task/node_modules/@prisma/client/runtime/index.js:29753:22) {
+  clientVersion: '4.2.1'
+}
+
+
 ==============================NEW CODE AND NEW ERROR :
 
     try {
