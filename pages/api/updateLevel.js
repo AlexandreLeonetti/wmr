@@ -14,13 +14,10 @@ export default async function handler(req, res) {
 
 async function updatePlayer (req, res) {
     const body = JSON.parse(req.body);
-    body.level=7;
+//    body.level=7;
     console.log("in API");
     console.log(body);
     try {
-        console.log("body.email"+body.email);
-        console.log("body.level"+body.level);
-        console.log("body.username"+body.username);
         const newEntry = await prisma.players.upsert({
                          where : {
                                                 email: body.email,
