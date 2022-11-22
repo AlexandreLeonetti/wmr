@@ -111,4 +111,43 @@ Did you mean `email_id`?
 }
 
 
+====================================================================================================
+turns out... it's not an object but a string.
+
+
+[POST] /api/updateLevel
+13:09:26:28
+2022-11-22T12:09:26.359Z    aad59b70-2760-4518-a720-afb5e6ad4d07    ERROR   TypeError: Cannot create property 'level' on string '{"username":"Alexandre","email":"alexandre.leonetti1@gmail.com","country":"","level":null}'
+    at updatePlayer (/var/task/.next/server/pages/api/updateLevel.js:38:16)
+    at handler (/var/task/.next/server/pages/api/updateLevel.js:28:22)
+    at Object.apiResolver (/var/task/node_modules/next/dist/server/api-utils/node.js:184:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async NextNodeServer.runApi (/var/task/node_modules/next/dist/server/next-server.js:403:9)
+    at async Object.fn (/var/task/node_modules/next/dist/server/base-server.js:493:37)
+    at async Router.execute (/var/task/node_modules/next/dist/server/router.js:222:36)
+    at async NextNodeServer.run (/var/task/node_modules/next/dist/server/base-server.js:612:29)
+    at async NextNodeServer.handleRequest (/var/task/node_modules/next/dist/server/base-server.js:311:20)
+    at async Server.module.exports (/var/task/___next_launcher.cjs:29:9)
+2022-11-22T12:09:26.361Z    aad59b70-2760-4518-a720-afb5e6ad4d07    ERROR   TypeError: Cannot create property 'level' on string '{"username":"Alexandre","email":"alexandre.leonetti1@gmail.com","country":"","level":null}'
+    at updatePlayer (/var/task/.next/server/pages/api/updateLevel.js:38:16)
+    at handler (/var/task/.next/server/pages/api/updateLevel.js:28:22)
+    at Object.apiResolver (/var/task/node_modules/next/dist/server/api-utils/node.js:184:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async NextNodeServer.runApi (/var/task/node_modules/next/dist/server/next-server.js:403:9)
+    at async Object.fn (/var/task/node_modules/next/dist/server/base-server.js:493:37)
+    at async Router.execute (/var/task/node_modules/next/dist/server/router.js:222:36)
+    at async NextNodeServer.run (/var/task/node_modules/next/dist/server/base-server.js:612:29)
+    at async NextNodeServer.handleRequest (/var/task/node_modules/next/dist/server/base-server.js:311:20)
+    at async Server.module.exports (/var/task/___next_launcher.cjs:29:9)
+RequestId: aad59b70-2760-4518-a720-afb5e6ad4d07 Error: Runtime exited with error: exit status 1
+Runtime.ExitError
+
+
+
+and the code that made the error be revealed is the following.
+
+body.level=7;
+
+problem was invisible because the console.log function interpreted the stringified object into an object,
+turns out it was a string, but browser console presented it as an object, beware next time.
 

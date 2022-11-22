@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
 
 async function updatePlayer (req, res) {
-    const body = req.body;
+    const body = JSON.parse(req.body);
     body.level=7;
     console.log("in API");
     console.log(body);
