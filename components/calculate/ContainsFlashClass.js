@@ -101,11 +101,12 @@ async sendLevel () {
 
 
         async getSingleLevel () {
-            console.log(this.props.sessionUnit);
+            console.log(this.props.sessionUnit.data.user.email);
+            const email = this.props.sessionUnit.data.user.email;
             console.dir(this.props.sessionUnit);
             try {
             const playerInfo= {
-                email:session?.user.email,
+                email:email,
             }
 
             const result = await fetch( `/api/getSingleLevel`, {
