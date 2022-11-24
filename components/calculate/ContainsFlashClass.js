@@ -112,7 +112,7 @@ async sendLevel () {
             })
 
             const jsonData = await result.json();
-                console.log(json.Data);
+                console.log(jsonData);
             this.setState({ level : jsonData.level});
 
                if(response.status !==200){
