@@ -21,7 +21,7 @@ import ContainsFlashClass from '../../components/calculate/ContainsFlashClass';
 
 
 export default function Example() {
-const {data : session}                   =   useSession();
+const data                   =   useSession();
   return(
 	<div>
 	  <div className=" bg-zinc-50 mx-auto h-screen ">
