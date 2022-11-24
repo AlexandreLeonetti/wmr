@@ -1,0 +1,186 @@
+change level to 99 or 999,
+save level and start again at previous level
+
+
+add button at calculate page below home
+to call the get function to get level.
+
+secondly make it automaticat first with loading bar.
+
+
+if level exist take it and start calculate from there
+add country choice.
+clean interface.
+
+
+from level 1 to 29
+
+single digits
+
+
+from 30 to 60 double digits
+
+
+from 61 to 99 3 digits
+by steps of 50 ms
+
+from 100 to 300 function of digits plus speed.
+by steps of 50 ms
+
+
+
+1
+1200 ms 2 times 1 to 9
+1200 ms 2 times 5 to 9
+1200 ms 3 times 1 to 9
+900 ms 3 times 1 to 9
+700 ms 3 times 1 to 9
+1200 ms 4 times 1 to 9
+1200 ms 4 times 4 to 9
+1200 ms 4 times 5 to 9
+900 ms 4 times 1 to 9
+700 ms  4 times 1 to 9
+10
+1000 ms 5 times 1 to 9
+1000 ms 5 times 5 to 9
+900 ms  5 times 1 to 9
+900 ms  5 times 5 to 9
+800 ms  5 times 1 to 9
+800 ms  5 times 5 to 9
+700 ms  5 times 1 to 9
+700 ms  5 times 5 to 9
+600 ms  5 times 1 to 9
+600 ms  5 times 5 to 9
+20
+500 ms  5 times 1 to 9
+500 ms  5 times 5 to 9
+800 ms 7 times 1 to 9
+800 ms 10 times 1 to 9
+900 ms  10 times 1 to 9
+800 ms  10 times 1 to 9
+700 ms  10 times 1 to 9
+600 ms  10 times 1 to 9
+500 ms 10 times 1 to 9
+500 ms 10 times 5 to 9
+30
+1000 ms 2 times 11 to 15
+1000 ms 3 times 11 to 15
+1000 ms 3 times 11 to 19
+1000 ms 3 times 11 to 29
+1000 ms 4 times 11 to 15
+1000 ms 4 times 11 to 19
+1000 ms 5 times 11 to 29
+1000 ms 5 times 11 to 39
+900  ms 5 times 11 to 39
+800  ms 5 times 11 to 39
+40
+1000 ms 5 times 11 to 99
+1000 ms 6 times 11 to 99
+1000 ms 7 times 11 to 99
+1000 ms 8 times 11 to 99
+1000 ms 9 times 11 to 99
+1000 ms 10 times 11 to 99
+900  ms 5 times 11 to 99
+900 ms  6 times 11 to 99
+900 ms 7 times 11 to 99
+900 ms 8 times 11 to 99
+50
+900 ms 10 times 11 to 99
+800 ms 10 times 11 to 99
+750 ms 10 times 11 to 99
+700 ms 10 times 11 to 99
+650 ms 10 times 11 to 99
+650 ms 10 times 11 to 99
+650 ms 12 times 11 to 99
+650 ms 15 times 11 to 99
+650 ms 20 times 11 to 99
+650 ms 20 times 55 to 99
+60
+1500 ms 3 times 111 to 999
+1500 ms 3 times 555 to 999
+1500 ms 4 times 111 to 999
+1500 ms 4 times 555 to 999
+1500 ms 4 times 666 to 999
+1500 ms 5 times 111 to 999
+1500 ms 5 times 555 to 999
+1500 ms 6 times 111 to 999
+1500 ms 6 times 555 to 999
+1500 ms 10 times 111 to 999
+70
+1200 ms 3 times 111 to 999
+1200 ms 3 times 555 to 999
+1200 ms 4 times 111 to 999
+1200 ms 4 times 555 to 999
+1200 ms 4 times 666 to 999
+1200 ms 5 times 111 to 999
+1200 ms 5 times 555 to 999
+1200 ms 6 times 111 to 999
+1200 ms 6 times 555 to 999
+1200 ms 10 times 111 to 999
+80
+1000 ms 3 times 111 to 999
+1000 ms 3 times 555 to 999
+1000 ms 4 times 111 to 999
+1000 ms 4 times 555 to 999
+1000 ms 4 times 666 to 999
+1000 ms 5 times 111 to 999
+1000 ms 5 times 555 to 999
+1000 ms 6 times 111 to 999
+1000 ms 6 times 555 to 999
+1000 ms 10 times 111 to 999
+90
+800 ms 3 times 111 to 999
+780 ms 3 times 555 to 999
+760 ms 4 times 111 to 999
+740 ms 4 times 555 to 999
+720 ms 4 times 666 to 999
+700 ms 5 times 111 to 999
+680 ms 5 times 555 to 999
+660 ms 6 times 111 to 999
+630 ms 6 times 555 to 999
+600 ms 10 times 111 to 999
+100
+500 ms 5 times 111 to 999
+500 ms 5 times 555 to 999
+500 ms 6 times 111 to 999
+500 ms 6 times 555 to 999
+500 ms 7 times 666 to 999
+500 ms 7 times 111 to 999
+500 ms 8 times 555 to 999
+500 ms 8 times 111 to 999
+500 ms 9 times 555 to 999
+500 ms 10 times 111 to 999
+110
+450 ms 5 times 111 to 999
+450 ms 5 times 555 to 999
+450 ms 6 times 111 to 999
+450 ms 6 times 555 to 999
+450 ms 7 times 666 to 999
+450 ms 7 times 111 to 999
+450 ms 8 times 555 to 999
+450 ms 8 times 111 to 999
+450 ms 9 times 555 to 999
+450 ms 10 times 111 to 999
+120
+400 ms 5 times 111 to 999
+400 ms 5 times 555 to 999
+400 ms 6 times 111 to 999
+400 ms 6 times 555 to 999
+400 ms 7 times 666 to 999
+400 ms 7 times 111 to 999
+400 ms 8 times 555 to 999
+400 ms 8 times 111 to 999
+400 ms 9 times 555 to 999
+400 ms 10 times 111 to 999
+130
+350 ms 5 times 111 to 999
+350 ms 5 times 555 to 999
+350 ms 6 times 111 to 999
+350 ms 6 times 555 to 999
+350 ms 7 times 666 to 999
+350 ms 7 times 111 to 999
+350 ms 8 times 555 to 999
+350 ms 8 times 111 to 999
+350 ms 9 times 555 to 999
+350 ms 10 times 111 to 999
+
