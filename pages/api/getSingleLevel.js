@@ -15,6 +15,7 @@ export default async function handler(req, res){
 
 async function readUniquePlayer(req,res) {
     const userEmail = req.query.user;
+    console.log(userEmail);
     try{
         const uniquePlayer = await prisma.players.findUnique({
             where: {
