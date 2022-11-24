@@ -113,13 +113,12 @@ async sendLevel () {
             })
 
             const jsonData = await result.json();
-                console.log(jsonData);
-                console.log(jsonData.level);
             this.setState({level:jsonData.level});
-
+            
                if(result.status !==200){
                    console.log("something went wrong");
                }
+                return jsonData;
             }catch (error){
                 console.log("there was an error reading from the db to get the level, " , error);
             }
