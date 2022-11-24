@@ -48,6 +48,7 @@ class ContainsFlashClass extends Component{
 				this.incLevel               =   this.incLevel.bind(this)             ;
                 this.sendLevel              =   this.sendLevel.bind(this)            ;
                 this.postPlayer             =   this.postPlayer.bind(this)           ;
+                this.getSingleLevel         =   this.getSingleLevel.bind(this)       ;
 		}
 
         //post player function
@@ -114,7 +115,7 @@ async sendLevel () {
             const jsonData = await result.json();
                 console.log(jsonData);
                 console.log(jsonData.level);
-            this.setState({ level : jsonData.level});
+            this.setState({level:jsonData.level});
 
                if(result.status !==200){
                    console.log("something went wrong");
