@@ -14,11 +14,11 @@ export default async function handler(req, res){
 
 
 async function readUniquePlayer(req,res) {
-    const body = req.body;
+    const userEmail = req.query.user;
     try{
         const uniquePlayer = await prisma.players.findUnique({
             where: {
-                email:body.email,
+                email:userEmail,
             },
         });
         return res.status(200).json(uniquePlayer, {success:true});

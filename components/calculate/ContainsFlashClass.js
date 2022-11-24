@@ -105,13 +105,10 @@ async sendLevel () {
             const email = this.props.sessionUnit.data.user.email;
             console.dir(this.props.sessionUnit);
             try {
-            const playerInfo= {
-                email:email,
-            }
 
-            const result = await fetch( `/api/getSingleLevel`, {
-                body: JSON.stringify(playerInfo),
+            const result = await fetch( `/api/getSingleLevel?user=${email}`, {
                 method: 'GET',
+                headers: {"Content-Type": "application/json"}
             })
 
             const jsonData = await result.json();
