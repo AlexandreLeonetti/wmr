@@ -101,8 +101,8 @@ async sendLevel () {
 
 
         async getSingleLevel () {
-            console.log(props.sessionUnit);
-            console.dir(props.sessionUnit);
+            console.log(this.props.sessionUnit);
+            console.dir(this.props.sessionUnit);
             try {
             const playerInfo= {
                 email:session?.user.email,
