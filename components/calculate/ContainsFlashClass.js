@@ -5,6 +5,7 @@ import Stats from './Stats';
 import Levels from './Levels';
 import Link from 'next/link';
 import SaveLevel from './SaveLevel';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 
 const generate = (cnumberOfDigits,clow) => {
