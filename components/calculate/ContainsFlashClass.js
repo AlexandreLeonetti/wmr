@@ -154,7 +154,7 @@ class ContainsFlashClass extends Component{
 	}
 
  componentDidMount(){
-        getSingleLevel ();
+       this.getSingleLevel();
  }
 
 
