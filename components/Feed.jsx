@@ -12,6 +12,7 @@ function Feed() {
     const[country, setCountry]=useState("");
     const[level, setLevel]=useState("");
     const[players, setPlayers]=useState(null);
+
     useEffect(() => {
         fetchPlayers();
     },[])

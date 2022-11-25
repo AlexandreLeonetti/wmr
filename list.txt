@@ -1,17 +1,17 @@
-change level to 99 or 999,
-save level and start again at previous level
+change level to 99 or 999, inject new value NO
 
 
-add button at calculate page below home
-to call the get function to get level.
+add button at calculate page below home     OK
+to call the get function to get level.      OK
 
-secondly make it automaticat first with loading bar.
+secondly make it automaticat first with loading bar.        ALMOST
+take notes from feed which loads on each refresh.
 
 
-if level exist take it and start calculate from there
-add country choice.
-clean interface.
-
+if level exist take it and start calculate from there       ALMOST
+add country choice.                         NO
+clean interface.                            NO
+====================================================================================================
 
 from level 1 to 29
 
