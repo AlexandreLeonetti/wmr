@@ -50,7 +50,7 @@ class ContainsFlashClass extends Component{
 		}
 
         //post player function
-//        const {data : session}              = useSession()                           ;
+        //const {data : session}              = useSession()                           ;
 
     
 
@@ -154,9 +154,13 @@ class ContainsFlashClass extends Component{
 	}
 
  componentDidMount(){
+     console.log("calculate did mount");
        this.getSingleLevel();
  }
 
+    componentDidUpdate(prevProps,prevState){
+        console.log("calculate did update");
+    }
 
 
 	render(){
