@@ -54,52 +54,7 @@ class ContainsFlashClass extends Component{
         //post player function
 //        const {data : session}              = useSession()                           ;
 
-        async postPlayer                    ()  {
-                                                    const playerInfo= {
-                                                        username: session?.user.name || 'Unkown User',
-                                                        country : this.state.country ,
-                                                        level :  parseInt(this.state.level) ,
-                                                        blockPlayer : this.state.blockPlayer,
-                                                    }; 
-		                                            setCountry('_');
-        
-                                                    const result   =    await fetch(`/api/addPlayer`, {
-                                                        body: JSON.stringify(playerInfo),
-                                                        method:'POST',
-                                                    })
-                
-                                                    const jsonData = await result.json();
-                                                    const newPlayers = await fetchPlayers();
-                                                    setPlayers(newPlayers)
-
-                                                    toast('Player Posted', {
-                                                                        icon:''
-                                                                })
-                                                    return jsonData;
-                                                }
-         //creating a new book
-async sendLevel () {
-        //e.preventDefault();
-    const body = {"title": "level : " +this.state.level, "author":"level : "+this.state.level, "genre":"level :"+this.state.level}
-        try {
-              const response = await fetch("/api/books", {
-                      method: "POST",
-                              headers: {"Content-Type": "application/json"},
-     body: JSON.stringify(body),
-         });
-        if (response.status !== 200){
-        console.log("something went wrong while sending level");
-          console.log(body);
-         //set an error banner here     
-       } else {
-                   console.log("level submitted successfully !!!")
-        //set a success banner              
-                  }
-              } catch (error) {
-                   console.log("there was an error submitting level", error);
-              }
-       }
-
+    
 
         async getSingleLevel () {
             console.log(this.props.sessionUnit.data.user.email);
@@ -200,7 +155,9 @@ async sendLevel () {
 			this.setState({series : arrSeries});
 	}
 
-
+ componentDidMount(){
+        getSingleLevel ();
+ }
 
 
 
