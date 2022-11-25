@@ -46,8 +46,6 @@ class ContainsFlashClass extends Component{
 				this.handleSession		    =	this.handleSession.bind(this)		 ;
 				this.goHome				    =	this.goHome.bind(this)				 ;
 				this.incLevel               =   this.incLevel.bind(this)             ;
-                this.sendLevel              =   this.sendLevel.bind(this)            ;
-                this.postPlayer             =   this.postPlayer.bind(this)           ;
                 this.getSingleLevel         =   this.getSingleLevel.bind(this)       ;
 		}
 
