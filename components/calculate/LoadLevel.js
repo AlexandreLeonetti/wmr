@@ -22,6 +22,10 @@ function LoadLevel(props) {
                        try {
 
             const session = await getSession({ req });
+                           console.log("session");
+                           console.log(session);
+                           
+
                  console.log("LoadLevel data user level" + data.user.email);
                  const email = data.user.email;
                  console.dir("LoadLevel data user email" +  data.user.email);
