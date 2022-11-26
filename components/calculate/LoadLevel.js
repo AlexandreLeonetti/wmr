@@ -20,11 +20,11 @@ function LoadLevel(props) {
 
                     const jsonData = await result.json();
                     setLevel(jsonData.level);        
-                    props.greetHandler(level);            
+
                     if(result.status !==200){
                         console.log("something went wrong");
                     }
-                    return jsonData;
+                    return jsonData.level;
             }catch (error){
                 console.log("there was an error reading from the db to get the level, " , error);
             }
@@ -32,7 +32,8 @@ function LoadLevel(props) {
 
 
     useEffect(() => {
-        getSingleLevel();
+        let receivedLevel= getSingleLevel();
+                    props.greetHandler(receivedLevel);            
     },[])
 
 
