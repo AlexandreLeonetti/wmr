@@ -250,7 +250,7 @@ class ContainsFlashClass extends Component{
                     </div>
                      <Feed />
                      <LoadLevel
-                            sessionUnit =  this.props.sessionUnit 
+                            sessionUnit = { this.props.sessionUnit }
                      />
                     <Link href="/">
                                         <div
