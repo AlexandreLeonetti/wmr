@@ -20,7 +20,7 @@ function LoadLevel(props) {
 
                     const jsonData = await result.json();
                     setLevel(jsonData.level);        
-                    props.greeHandler(level);            
+                    props.greetHandler(level);            
                     if(result.status !==200){
                         console.log("something went wrong");
                     }
