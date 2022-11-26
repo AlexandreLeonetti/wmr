@@ -5,44 +5,26 @@ import React, {useEffect, useState} from 'react';
 
 function LoadLevel(props) {
 
-        const[level, setLevel]=useState('');
-        const {data : session} = useSession();        
+    const[level, setLevel]=useState('');
+        
 
-        const handler = async () => {
-            const session = await getSession ({ req });
-                console.log("LoadLevel/handler/session");
-                console.log(session);
-                getSingleLevel();
+    const getSingleLevel =  async (req, res) => {
+              try {
+                     const session = await getSession({ req });
+                     const email = session.user.email;
 
+                     const result = await fetch( `/api/getSingleLevel?user=${email}`, {
+                        method: 'GET',
+                        headers: {"Content-Type": "application/json"}
+                     })
 
-
-        }
-
-        const getSingleLevel =  async (req, res) => {
-                       try {
-
-            const session = await getSession({ req });
-                           console.log("session");
-                           console.log(session);
-                           
-
-                 console.log("LoadLevel data user level" + session.user.email);
-                 const email = session.user.email;
-
-            const result = await fetch( `/api/getSingleLevel?user=${email}`, {
-                method: 'GET',
-                headers: {"Content-Type": "application/json"}
-            })
-
-            const jsonData = await result.json();
-                console.log("level state : " +level);
-                console.log("level received: "+ jsonData.level);
-                setLevel(jsonData.level);        
+                    const jsonData = await result.json();
+                    setLevel(jsonData.level);        
             
-               if(result.status !==200){
-                   console.log("something went wrong");
-               }
-                return jsonData;
+                    if(result.status !==200){
+                        console.log("something went wrong");
+                    }
+                    return jsonData;
             }catch (error){
                 console.log("there was an error reading from the db to get the level, " , error);
             }
