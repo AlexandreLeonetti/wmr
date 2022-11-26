@@ -7,7 +7,7 @@ import Link from 'next/link';
 import SaveLevel from './SaveLevel';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Feed from '../Feed';
-import LoadLevel './LoadLevel';
+import LoadLevel  from './LoadLevel';
 
 const generate = (cnumberOfDigits,clow) => {
 		//genrate digits of the concatedStrNumber in the current flash.
