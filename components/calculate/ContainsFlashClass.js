@@ -248,10 +248,7 @@ class ContainsFlashClass extends Component{
 						     <div className="circle bg-emerald-500 delay3"></div>
 				        </div>
                     </div>
-                     <Feed />
-                     <LoadLevel
-                            sessionUnit = { this.props.sessionUnit }
-                     />
+                     <LoadLevel/>
                     <Link href="/">
                                         <div
 												className=" cursor-pointer mt-5 bg-white text-black font-black w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base" 
