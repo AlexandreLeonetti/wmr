@@ -2,7 +2,6 @@ import {  signIn, signOut, useSession, getSession } from 'next-auth/react';
 import React, {useEffect, useState} from 'react';
 
 
-const session = await getSession({ req });
 
 function LoadLevel(props) {
 
@@ -20,10 +19,12 @@ function LoadLevel(props) {
         }
 
         const getSingleLevel =  async () => {
-            console.log("LoadLevel data user level" + data.user.email);
-            const email = data.user.email;
-            console.dir("LoadLevel data user email" +  data.user.email);
-            try {
+                       try {
+
+            const session = await getSession({ req });
+                 console.log("LoadLevel data user level" + data.user.email);
+                 const email = data.user.email;
+                 console.dir("LoadLevel data user email" +  data.user.email);
 
             const result = await fetch( `/api/getSingleLevel?user=${email}`, {
                 method: 'GET',
@@ -46,7 +47,7 @@ function LoadLevel(props) {
 
 
     useEffect(() => {
-        handler();
+        getSingleLevel();
     },[])
 
 
