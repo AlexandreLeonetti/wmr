@@ -55,7 +55,7 @@ class ContainsFlashClass extends Component{
 
         greetParent(levelTest){
             alert("hello parent component" + levelTest);
-
+        }
 		incLevel(){
                    console.log(`level ${this.state.level}`);
                //this.sendLevel(); 
