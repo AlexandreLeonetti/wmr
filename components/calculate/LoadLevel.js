@@ -5,9 +5,9 @@ function LoadLevel(props) {
         const[level, setLevel]=useState('');
         
 const getSingleLevel =  async () => {
-            console.log(props.sessionUnit.data.user.email);
+            console.log("LoadLevel" + props.sessionUnit.data.user.email);
             const email = props.sessionUnit.data.user.email;
-            console.dir(props.sessionUnit);
+            console.dir("LoadLevel props sessionUnit" + props.sessionUnit);
             try {
 
             const result = await fetch( `/api/getSingleLevel?user=${email}`, {
