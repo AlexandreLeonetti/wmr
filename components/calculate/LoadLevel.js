@@ -47,7 +47,7 @@ function LoadLevel(props) {
 				        <div className="py-20 inline-flex items-center justify-center">
   	  		                <button 
 				    	        className="disk bg-emerald-400 text-4xl text-white w-40 font-black inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-2xl shadow-sm text-base" 
-                                onClick()={ props.flashHandler}
+                                onClick={props.flashHandler}
 					         > Level {level}</button>
 					         <div className="circle bg-emerald-500"></div>
 	  					     <div className="circle bg-emerald-500 delay1"></div>
