@@ -9,11 +9,11 @@ function LoadLevel(props) {
         
 
     const getSingleLevel =  async (req, res) => {
-              try {
-                     const session = await getSession({ req });
-                     const email = session.user.email;
+            try {
+                    const session = await getSession({ req });
+                    const email = session.user.email;
 
-                     const result = await fetch( `/api/getSingleLevel?user=${email}`, {
+                    const result = await fetch( `/api/getSingleLevel?user=${email}`, {
                         method: 'GET',
                         headers: {"Content-Type": "application/json"}
                      })
@@ -26,17 +26,18 @@ function LoadLevel(props) {
                     }
                     return jsonData.level;
             }catch (error){
-                console.log("there was an error reading from the db to get the level, " , error);
+                    console.log("there was an error reading from the db to get the level, " , error);
             }
         }
 
 
     useEffect(() => {
          getSingleLevel();
-                    props.greetHandler(level);            
     },[])
 
-
+    useEffect(() => {
+        props.greetHandler(level);
+    },[level]);
 
 
     return(
