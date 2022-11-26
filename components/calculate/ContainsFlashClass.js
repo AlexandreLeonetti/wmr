@@ -47,43 +47,14 @@ class ContainsFlashClass extends Component{
 				this.handleSession		    =	this.handleSession.bind(this)		 ;
 				this.goHome				    =	this.goHome.bind(this)				 ;
 				this.incLevel               =   this.incLevel.bind(this)             ;
-                this.getSingleLevel         =   this.getSingleLevel.bind(this)       ;
+                this.greetParents           =   this.greetParents.bind(this)         ;
 		}
 
         //post player function
         //const {data : session}              = useSession()                           ;
 
-    
-
-        async getSingleLevel () {
-            console.log(this.props.sessionUnit.data.user.email);
-            const email = this.props.sessionUnit.data.user.email;
-            console.dir(this.props.sessionUnit);
-            try {
-
-            const result = await fetch( `/api/getSingleLevel?user=${email}`, {
-                method: 'GET',
-                headers: {"Content-Type": "application/json"}
-            })
-
-            const jsonData = await result.json();
-                console.log(this.state.level);
-            this.setState({
-                level:jsonData.level,
-                contentBtn:`LEVEL ${jsonData.level}`
-
-            });
-                
-                console.log(this.state.level);
-            
-               if(result.status !==200){
-                   console.log("something went wrong");
-               }
-                return jsonData;
-            }catch (error){
-                console.log("there was an error reading from the db to get the level, " , error);
-            }
-        }
+        greetParent(levelTest){
+            alert("hello parent component" + levelTest);
 
 		incLevel(){
                    console.log(`level ${this.state.level}`);
@@ -156,7 +127,6 @@ class ContainsFlashClass extends Component{
 
  componentDidMount(){
      console.log("calculate did mount");
-       this.getSingleLevel();
  }
 
     componentDidUpdate(prevProps,prevState){
@@ -248,18 +218,13 @@ class ContainsFlashClass extends Component{
 						     <div className="circle bg-emerald-500 delay3"></div>
 				        </div>
                     </div>
-                     <LoadLevel/>
+                     <LoadLevel greetHandler={this.greetParents}/>
                     <Link href="/">
                                         <div
 												className=" cursor-pointer mt-5 bg-white text-black font-black w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base" 
 																		>Home
 										</div>
                     </Link>
-                                        <button
-												className=" cursor-pointer mt-5 bg-white text-black font-black w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base" 
-                                                onClick={() => this.getSingleLevel()}
-																		>Current Level
-										</button>
 				 </>
 				}
               </div>
