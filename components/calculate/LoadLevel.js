@@ -18,7 +18,7 @@ function LoadLevel(props) {
 
         }
 
-        const getSingleLevel =  async () => {
+        const getSingleLevel =  async (req, res) => {
                        try {
 
             const session = await getSession({ req });
