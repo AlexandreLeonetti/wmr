@@ -26,9 +26,8 @@ function LoadLevel(props) {
                            console.log(session);
                            
 
-                 console.log("LoadLevel data user level" + data.user.email);
-                 const email = data.user.email;
-                 console.dir("LoadLevel data user email" +  data.user.email);
+                 console.log("LoadLevel data user level" + session.user.email);
+                 const email = session.user.email;
 
             const result = await fetch( `/api/getSingleLevel?user=${email}`, {
                 method: 'GET',
