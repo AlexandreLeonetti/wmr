@@ -32,8 +32,8 @@ function LoadLevel(props) {
 
 
     useEffect(() => {
-        let receivedLevel= getSingleLevel();
-                    props.greetHandler(receivedLevel);            
+         getSingleLevel();
+                    props.greetHandler(level);            
     },[])
 
 

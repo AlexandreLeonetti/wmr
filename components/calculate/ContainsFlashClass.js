@@ -54,7 +54,8 @@ class ContainsFlashClass extends Component{
         //const {data : session}              = useSession()                           ;
 
         greetParent(levelTest){
-            alert("hello parent component" + levelTest);
+            console.log("hello parent component" + levelTest);
+            this.setState({level:levelTest});
         }
 		incLevel(){
                    console.log(`level ${this.state.level}`);
