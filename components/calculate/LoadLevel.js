@@ -1,22 +1,25 @@
-import {  signIn, signOut, useSession, getSession } from 'next-auth/react'
-import React, {useEffect, useState} from 'react'
+import {  signIn, signOut, useSession, getSession } from 'next-auth/react';
+import React, {useEffect, useState} from 'react';
 
 
 const session = await getSession({ req });
-async function handler (req, res){
-    const session = await getSession ({ req });
-    console.log("LoadLevel/handler/session");
-    console.log(session);
-}
-
 
 function LoadLevel(props) {
 
         const[level, setLevel]=useState('');
         const {data : session} = useSession();        
 
+        const handler = async () => {
+            const session = await getSession ({ req });
+                console.log("LoadLevel/handler/session");
+                console.log(session);
+                getSingleLevel();
+
+
+
+        }
+
         const getSingleLevel =  async () => {
-            handler();
             console.log("LoadLevel data user level" + data.user.email);
             const email = data.user.email;
             console.dir("LoadLevel data user email" +  data.user.email);
@@ -43,7 +46,7 @@ function LoadLevel(props) {
 
 
     useEffect(() => {
-        getSingleLevel();
+        handler();
     },[])
 
 
