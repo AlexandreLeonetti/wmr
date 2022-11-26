@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react'
 function LoadLevel(props) {
         const[level, setLevel]=useState('');
         
-const getSinglelevel =  async () => {
+const getSingleLevel =  async () => {
             console.log(props.sessionUnit.data.user.email);
             const email = props.sessionUnit.data.user.email;
             console.dir(props.sessionUnit);
