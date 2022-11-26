@@ -16,9 +16,9 @@ const getSingleLevel =  async () => {
             })
 
             const jsonData = await result.json();
-                console.log(level);
+                console.log("level state : " +level);
+                console.log("level received: "+ jsonData.level);
                 setLevel(jsonData.level);        
-                console.log(level);
             
                if(result.status !==200){
                    console.log("something went wrong");
