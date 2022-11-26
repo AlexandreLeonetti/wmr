@@ -221,7 +221,7 @@ class ContainsFlashClass extends Component{
                     </div> */}
                      <LoadLevel 
                             greetHandler={this.greetParent}
-                            flashHandler={this.handleStartFlashing()}
+                            flashHandler={this.handleStartFlashing}
                      />
                     <Link href="/">
                                         <div
