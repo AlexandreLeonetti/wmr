@@ -22,6 +22,7 @@ function LoadLevel(props) {
 
                     if(result.status !==200){
                         console.log("something went wrong");
+                        setLevel(1);
                     }
                     return jsonData.level;
             }catch (error){
@@ -42,6 +43,9 @@ function LoadLevel(props) {
     return(
         <>
         {/** Type : inline */}
+        {
+            level===''?
+                (
 		        <Triangle
                      type="Puff"
                      color="#00BFFF"
@@ -49,6 +53,11 @@ function LoadLevel(props) {
                      width={100}
                      timeout={3000} 
                 />
+
+                )
+            :
+
+                (
                    <div	className=" inline-flex items-center justify-center">
 				        <div className="py-20 inline-flex items-center justify-center">
   	  		                <button 
@@ -61,6 +70,9 @@ function LoadLevel(props) {
 						     <div className="circle bg-emerald-500 delay3"></div>
 				        </div>
                     </div>
+
+                )
+        }
 
         </>
     )
