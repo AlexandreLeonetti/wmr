@@ -105,7 +105,9 @@ function Feed() {
                     
 
                </div>
-       {players
+       {
+            /*
+           players
           ?.map((player, index) => ( <PlayerComponent index={index} key={player.id} player={player} />  ))
           : {
        
@@ -123,7 +125,34 @@ function Feed() {
 
 </div>
           }
+*/}
+
+
+
+       {
+
+           players
+           ?
+          ( players.map((player, index) => ( <PlayerComponent index={index} key={player.id} player={player} />  )))
+
+      : 
+           ( <div className=" flex justify-center  items-center">                 
+		        <TailSpin
+          height="180"
+          width="180"
+          color="#3b82f6"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+
+        </div>)
+      
 }
+
+
     </div>
     </div>
     <div></div>
