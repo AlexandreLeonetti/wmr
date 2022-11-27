@@ -1,16 +1,13 @@
-change level to 99 or 999, inject new value NO
-
-
 add button at calculate page below home     OK
 to call the get function to get level.      OK
+take notes from feed which loads on each refresh.           OK
+if level exist take it and start calculate from there       OK 
 
-secondly make it automaticat first with loading bar.        ALMOST
-take notes from feed which loads on each refresh.
-
-
-if level exist take it and start calculate from there       ALMOST
+add loading bar. or spinner                 ALMOST
+change level to 99 or 999, inject new value NO
 add country choice.                         NO
 clean interface.                            NO
+
 ====================================================================================================
 
 from level 1 to 29

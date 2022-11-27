@@ -1,12 +1,12 @@
 import {  signIn, signOut, useSession, getSession } from 'next-auth/react';
 import React, {useEffect, useState} from 'react';
-
+import Loader from "react-spinner-loader";
 
 
 function LoadLevel(props) {
 
     const[level, setLevel]=useState('');
-        
+    const [loader, setLoader] = useState(true);  
 
     const getSingleLevel =  async (req, res) => {
             try {
@@ -42,7 +42,8 @@ function LoadLevel(props) {
 
     return(
         <>
-
+        {/** Type : inline */}
+              <Loader show={loader} type="box" message="Loading Data" />
 				    <div	className=" inline-flex items-center justify-center">
 				        <div className="py-20 inline-flex items-center justify-center">
   	  		                <button 
