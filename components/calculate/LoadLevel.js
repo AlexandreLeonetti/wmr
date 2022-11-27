@@ -43,7 +43,7 @@ function LoadLevel(props) {
     return(
         <>
         {/** Type : inline */}
-              <Loader show={loader} type="box" message="Loading Data" />
+        {typeof window !== 'undefined' ? <Loader show={loader} type="box" message="Loading Data" /> : null}
 				    <div	className=" inline-flex items-center justify-center">
 				        <div className="py-20 inline-flex items-center justify-center">
   	  		                <button 
