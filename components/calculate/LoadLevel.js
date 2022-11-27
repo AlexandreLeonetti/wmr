@@ -26,7 +26,8 @@ function LoadLevel(props) {
                     }
                     return jsonData.level;
             }catch (error){
-                    console.log("there was an error reading from the db to get the level, " , error);
+                         setLevel(1);
+                console.log("there was an error reading from the db to get the level, " , error);
             }
         }
 
