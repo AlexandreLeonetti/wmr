@@ -105,10 +105,9 @@ function Feed() {
                     
 
                </div>
-       {players?.map((player, index) => (
-        <PlayerComponent index={index} key={player.id} player={player} />
-        )):
-
+       {players
+          ?.map((player, index) => ( <PlayerComponent index={index} key={player.id} player={player} />  )):
+          : {
        
    <div className=" flex justify-center  items-center">                 
 		        <TailSpin
@@ -123,7 +122,7 @@ function Feed() {
         />
 
 </div>
-
+          }
 }
     </div>
     </div>
