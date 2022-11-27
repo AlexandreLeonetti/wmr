@@ -21,7 +21,7 @@
     "react-country-flag": "^3.0.2",
     "react-dom": "18.1.0",
     "react-hot-toast": "^2.3.0",
-    "react-spinner-loader": "^1.1.1",
+    "react-loader-spinner": "^5.3.4",
     "remove": "^0.1.5"
   },
   "devDependencies": {

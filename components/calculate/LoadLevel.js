@@ -1,7 +1,7 @@
 import {  signIn, signOut, useSession, getSession } from 'next-auth/react';
 import React, {useEffect, useState} from 'react';
-import Loader from "react-spinner-loader";
-
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function LoadLevel(props) {
 
@@ -43,8 +43,14 @@ function LoadLevel(props) {
     return(
         <>
         {/** Type : inline */}
-        {typeof window !== 'undefined' ? <Loader show={loader} type="box" message="Loading Data" /> : null}
-				    <div	className=" inline-flex items-center justify-center">
+		        <Loader
+                     type="Puff"
+                     color="#00BFFF"
+                     height={100}
+                     width={100}
+                     timeout={3000} 
+                />
+                   <div	className=" inline-flex items-center justify-center">
 				        <div className="py-20 inline-flex items-center justify-center">
   	  		                <button 
 				    	        className="disk bg-emerald-400 text-4xl text-white w-40 font-black inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-2xl shadow-sm text-base" 
