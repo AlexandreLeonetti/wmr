@@ -45,16 +45,21 @@ function LoadLevel(props) {
         {/** Type : inline */}
         {
             level===''?
-                (
-		        <Triangle
-                     type="Puff"
-                     color="#00BFFF"
-                     height={100}
-                     width={100}
-                     timeout={3000} 
-                />
+        ( <div className=" mt-28 flex justify-center  items-center">                 
+		        <TailSpin
+          height="180"
+          width="180"
+          color="#34d399"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
 
-                )
+        </div>)
+
+
             :
 
                 (
