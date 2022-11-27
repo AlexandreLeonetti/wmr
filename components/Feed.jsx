@@ -4,6 +4,7 @@ import PlayerBox  from './PlayerBox'
 import PlayerComponent from './PlayerComponent'
 import {toast} from 'react-hot-toast'
 import Link from 'next/link'
+import Loader, {Triangle, TailSpin,  Dna} from "react-loader-spinner";
 
 
 function Feed() {
@@ -106,9 +107,24 @@ function Feed() {
                </div>
        {players?.map((player, index) => (
         <PlayerComponent index={index} key={player.id} player={player} />
-        ))
+        )):
 
-       }
+       
+   <div className=" flex justify-center  items-center">                 
+		        <TailSpin
+          height="180"
+          width="180"
+          color="#3b82f6"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+
+</div>
+
+}
     </div>
     </div>
     <div></div>
