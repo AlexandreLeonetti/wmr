@@ -1,7 +1,6 @@
 import {  signIn, signOut, useSession, getSession } from 'next-auth/react';
 import React, {useEffect, useState} from 'react';
-import Loader from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader, {Triangle} from "react-loader-spinner";
 
 function LoadLevel(props) {
 
@@ -43,7 +42,7 @@ function LoadLevel(props) {
     return(
         <>
         {/** Type : inline */}
-		        <Loader
+		        <Triangle
                      type="Puff"
                      color="#00BFFF"
                      height={100}
