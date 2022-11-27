@@ -106,7 +106,7 @@ function Feed() {
 
                </div>
        {players
-          ?.map((player, index) => ( <PlayerComponent index={index} key={player.id} player={player} />  )):
+          ?.map((player, index) => ( <PlayerComponent index={index} key={player.id} player={player} />  ))
           : {
        
    <div className=" flex justify-center  items-center">                 
