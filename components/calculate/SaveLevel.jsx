@@ -67,9 +67,9 @@ function SaveLevel (props) {
  
         	<ul className="text-sm">
 				<li className="grid grid-cols-2 h-12 mx-6 border-b border-gray-200 dark:border-gray-700 py-3 ">
-					<div className="col-span-1" >Score </div><div className="col-span-1 text-right"> {nameOfPlayer}</div> </li>
+					<div className="col-span-1" >Score </div><div className="col-span-1 text-right"> {nameOfPlayer===''? 'Log In' : nameOfPlayer}</div> </li>
 				<li className="h-12 grid grid-cols-2 mx-6 border-b border-gray-200 dark:border-gray-700 py-3">
-					<div>Ratio </div><div className="text-right">{session.user.name} </div></li>
+					<div>User Name : </div><div className="text-right">{session ? session.user.name : 'Log In'} </div></li>
 				<li className="grid grid-cols-2 h-12 mx-6 border-b border-gray-200 dark:border-gray-700 py-3">
 					<div>Level </div><div className="text-right"> {props.level} </div></li>
 				<li className="grid grid-cols-2 h-12 mx-6 border-b border-gray-200 dark:border-gray-700 py-3">

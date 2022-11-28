@@ -4,6 +4,7 @@ take notes from feed which loads on each refresh.           OK
 if level exist take it and start calculate from there       OK 
 
 add loading bar. or spinner                 ALMOST
+if session is loogetOut, return level 1, and show login menu when trying to save.
 change level to 99 or 999, inject new value NO
 add country choice.                         NO
 clean interface.                            NO
