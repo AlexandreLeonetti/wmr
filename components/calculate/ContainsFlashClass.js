@@ -17,7 +17,7 @@ const generate = (cnumberOfDigits,clow, cHigh) => {
 		for (let i=0; i< parseInt(cnumberOfDigits); i++){
 		let min=Math.ceil(clow);
         let max=cHigh+1;
-		let randomDigit = Math.floor(Math.random()*(10-min)+min);
+		let randomDigit = Math.floor(Math.random()*(max-min)+min);
 		randomDigit !=0 ? concatedStrNumber += String(randomDigit) : i --;
 		}
 	return concatedStrNumber;
