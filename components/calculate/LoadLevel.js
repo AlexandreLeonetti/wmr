@@ -1,6 +1,7 @@
 import {  signIn, signOut, useSession, getSession } from 'next-auth/react';
 import React, {useEffect, useState} from 'react';
 import Loader, {Triangle, TailSpin} from "react-loader-spinner";
+import Levels from './Levels';
 
 function LoadLevel(props) {
 
