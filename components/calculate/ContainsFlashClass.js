@@ -34,7 +34,7 @@ class ContainsFlashClass extends Component{
 	    			contentBtn		: "LEVEL 1"		,
 	    			cperiod			: 1200			,
 	    			cnumberOfDigits	: 1			    ,
-	    			cnumberOfFlashes: 3			    ,
+	    			cnumberOfFlashes: Levels[this.state.level].numberOfTimes ,
 	    			clow		    : 6			    ,
                     cHigh           : 9             ,
 	    			series			: []			,
@@ -51,7 +51,7 @@ class ContainsFlashClass extends Component{
 				this.handleSession		    =	this.handleSession.bind(this)		 ;
 				this.goHome				    =	this.goHome.bind(this)				 ;
 				this.incLevel               =   this.incLevel.bind(this)             ;
-                this.greetParent           =   this.greetParent.bind(this)         ;
+                this.greetParent           =   this.greetParent.bind(this)           ;
 		}
 
         //post player function
@@ -147,8 +147,7 @@ class ContainsFlashClass extends Component{
 		const 
 			cperiod		        = this.state.cperiod,
 			cnumberOfDigits		= this.state.cnumberOfDigits,
-//			cnumberOfFlashes    = this.state.cnumberOfFlashes,
-            cnumberOfFlashes    =  (this.state.arrSeries).length,			
+			cnumberOfFlashes    = this.state.cnumberOfFlashes,
             clow			    = this.state.clow, 
 			ratio 		        = this.state.ratio,
 			flasher 			= this.state.flasher,
