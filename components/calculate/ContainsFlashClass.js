@@ -133,6 +133,7 @@ class ContainsFlashClass extends Component{
 			console.log("created serie : ");
 			console.log(arrSeries);
 			this.setState({series : arrSeries});
+            this.setState({numberOfFlashes: Levels[this.state.level].numberOfTimes});
 	}
 
  componentDidMount(){
