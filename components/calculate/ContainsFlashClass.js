@@ -34,7 +34,7 @@ class ContainsFlashClass extends Component{
 	    			contentBtn		: "LEVEL 1"		,
 	    			cperiod			: 1200			,
 	    			cnumberOfDigits	: 1			    ,
-	    			cnumberOfFlashes: Levels[this.state.level].numberOfTimes ,
+	    			cnumberOfFlashes: 5             ,
 	    			clow		    : 6			    ,
                     cHigh           : 9             ,
 	    			series			: []			,
@@ -60,6 +60,7 @@ class ContainsFlashClass extends Component{
         greetParent(levelTest){
             console.log("hello parent component" + levelTest);
             this.setState({level:levelTest});
+            this.setState({cnumberOfFlashes:(Levels[this.state.level].numberOfTimes)});
         }
 		incLevel(){
                    console.log(`level ${this.state.level}`);
