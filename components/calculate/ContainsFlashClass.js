@@ -125,7 +125,7 @@ class ContainsFlashClass extends Component{
             
             let hBound = Levels[this.state.level].higherBound? (Levels[this.state.level].higherBound) : 9 ;
             console.log(hBound);
-			for(let i =0; i<this.state.cnumberOfFlashes;i++){
+			for(let i =0; i<(Levels[this.state.level].numberOfTimes);i++){
 	        	let x = generate(Levels[this.state.level].numberOfDigits,Levels[this.state.level].lowerBound, hBound);
 		        arrSeries[i]=x;
 			}
