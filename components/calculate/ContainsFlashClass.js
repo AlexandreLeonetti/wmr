@@ -60,7 +60,7 @@ class ContainsFlashClass extends Component{
         greetParent(levelTest){
             console.log("hello parent component" + levelTest);
             this.setState({level:levelTest});
-            this.setState({cnumberOfFlashes:(Levels[this.state.level].numberOfTimes)});
+           // this.setState({cnumberOfFlashes:(Levels[this.state.level].numberOfTimes)});
         }
 		incLevel(){
                    console.log(`level ${this.state.level}`);
