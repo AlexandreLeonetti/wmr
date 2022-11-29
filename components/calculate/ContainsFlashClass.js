@@ -10,11 +10,12 @@ import Feed from '../Feed';
 import LoadLevel  from './LoadLevel';
 
 
-const generate = (cnumberOfDigits,clow) => {
+const generate = (cnumberOfDigits,clow, cHigh) => {
 		//genrate digits of the concatedStrNumber in the current flash.
 		let concatedStrNumber = '';
 		for (let i=0; i< parseInt(cnumberOfDigits); i++){
 		let min=Math.ceil(clow);
+        let max=cHigh+1;
 		let randomDigit = Math.floor(Math.random()*(10-min)+min);
 		randomDigit !=0 ? concatedStrNumber += String(randomDigit) : i --;
 		}
@@ -34,6 +35,7 @@ class ContainsFlashClass extends Component{
 	    			cnumberOfDigits	: 1			    ,
 	    			cnumberOfFlashes: 3			    ,
 	    			clow		    : 6			    ,
+                    cHigh           : 9             ,
 	    			series			: []			,
 	    			ratio		    : []			,
 	    			hypothesis      : []            ,
@@ -118,8 +120,9 @@ class ContainsFlashClass extends Component{
 		
 	createSeries(){	
 			let arrSeries = this.state.series;
+            let hBound = Levels[this.state.level]? Levels[this.state.level].higherBound : 9 ;
 			for(let i =0; i<this.state.cnumberOfFlashes;i++){
-	        	let x = generate(Levels[this.state.level].numberOfDigits,Levels[this.state.level].lowerBound);
+	        	let x = generate(Levels[this.state.level].numberOfDigits,Levels[this.state.level].lowerBound, hBound);
 		        arrSeries[i]=x;
 			}
 			console.log("created serie : ");

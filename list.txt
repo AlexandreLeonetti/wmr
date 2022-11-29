@@ -3,9 +3,9 @@ to call the get function to get level.      OK
 take notes from feed which loads on each refresh.           OK
 if level exist take it and start calculate from there       OK 
 
-add loading bar. or spinner                 ALMOST
-if session is loogetOut, return level 1, and show login menu when trying to save.
-change level to 99 or 999, inject new value NO
+add loading bar. or spinner                OK 
+if session is loogetOut, return level 1, and show login menu when trying to save. OK
+change level to 99 or 999, inject new value   WORKING ON IT 
 add country choice.                         NO
 clean interface.                            NO
 
@@ -60,6 +60,12 @@ by steps of 50 ms
 600 ms  10 times 1 to 9
 500 ms 10 times 1 to 9
 500 ms 10 times 5 to 9
+
+
+higherBound? yes
+then return number between lower and higherBound.
+
+
 30
 1000 ms 2 times 11 to 15
 1000 ms 3 times 11 to 15
