@@ -148,7 +148,7 @@ class ContainsFlashClass extends Component{
 			cperiod		        = this.state.cperiod,
 			cnumberOfDigits		= this.state.cnumberOfDigits,
 //			cnumberOfFlashes    = this.state.cnumberOfFlashes,
-            cnumberOfFlashes    = Levels[this.state.level].numberOfTimes;
+            cnumberOfFlashes    = Levels[this.state.level].numberOfTimes,
 			clow			    = this.state.clow, 
 			ratio 		        = this.state.ratio,
 			flasher 			= this.state.flasher,
