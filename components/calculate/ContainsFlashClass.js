@@ -12,6 +12,7 @@ import LoadLevel  from './LoadLevel';
 
 const generate = (cnumberOfDigits,clow, cHigh) => {
 		//genrate digits of the concatedStrNumber in the current flash.
+    console.log(`n = ${cnumberOfDigits} clow = ${clow}  cHigh = ${cHigh} `);
 		let concatedStrNumber = '';
 		for (let i=0; i< parseInt(cnumberOfDigits); i++){
 		let min=Math.ceil(clow);
@@ -120,7 +121,10 @@ class ContainsFlashClass extends Component{
 		
 	createSeries(){	
 			let arrSeries = this.state.series;
-            let hBound = Levels[this.state.level]? Levels[this.state.level].higherBound : 9 ;
+            console.log("hBound");
+            
+            let hBound = Levels[this.state.level].higherBound? (Levels[this.state.level].higherBound) : 9 ;
+            console.log(hBound);
 			for(let i =0; i<this.state.cnumberOfFlashes;i++){
 	        	let x = generate(Levels[this.state.level].numberOfDigits,Levels[this.state.level].lowerBound, hBound);
 		        arrSeries[i]=x;
