@@ -180,63 +180,73 @@ const Levels =
         },
 	30 : {
             "interval":1000,
-            "numberOfDigits":1,
+            "numberOfDigits":2,
             "numberOfTimes":5,
-            "lowerBound":1          	
+            "lowerBound":1,          	
+            "higherBound":3
         },
 	31 : {
-            "interval":500,
-            "numberOfDigits":1,
+            "interval":1000,
+            "numberOfDigits":2,
             "numberOfTimes":5,
-            "lowerBound":5          	
+            "lowerBound":1          	
+            "higherBound":3
         },
 	32 : {
-            "interval":800,
-            "numberOfDigits":1,
-            "numberOfTimes":7,
-            "lowerBound":1          	
+            "interval":1000,
+            "numberOfDigits":2,
+            "numberOfTimes":3,
+            "lowerBound":1,          	
+            "higherBound":3
         },
 	33 : {
-            "interval":900,
-            "numberOfDigits":1,
-            "numberOfTimes":10,
-            "lowerBound":1          	
+            "interval":1000,
+            "numberOfDigits":2,
+            "numberOfTimes":3,
+            "lowerBound":1,          	
+            "higherBound":4
         },
 	34 : {
-            "interval":900,
-            "numberOfDigits":1,
-            "numberOfTimes":10,
-            "lowerBound":5          	
+            "interval":1000,
+            "numberOfDigits":2,
+            "numberOfTimes":4,
+            "lowerBound":1,          	
+            "lowerBound":4
         },
 	35 : {
-            "interval":800,
-            "numberOfDigits":1,
-            "numberOfTimes":10,
+            "interval":1000,
+            "numberOfDigits":2,
+            "numberOfTimes":4,
             "lowerBound":1          	
+            "higherBound":5
         },
 	36 : {
-            "interval":700,
-            "numberOfDigits":1,
-            "numberOfTimes":10,
-            "lowerBound":1          	
+            "interval":1000,
+            "numberOfDigits":2,
+            "numberOfTimes":5,
+            "lowerBound":1,          	
+            "higherBound":4
         },
 	37 : {
-            "interval":600,
-            "numberOfDigits":1,
+            "interval":1000,
+            "numberOfDigits":2,
             "numberOfTimes":5,
-            "lowerBound":1          	
+            "lowerBound":1,
+            "higherBound":5
         },
 	38 : {
-            "interval":500,
-            "numberOfDigits":1,
+            "interval":900,
+            "numberOfDigits":2,
             "numberOfTimes":5,
-            "lowerBound":1          	
+            "lowerBound":1,          	
+            "higherBound":5
         },
 	39 : {
-            "interval":500,
-            "numberOfDigits":1,
+            "interval":800,
+            "numberOfDigits":2,
             "numberOfTimes":5,
-            "lowerBound":5          	
+            "lowerBound":1,          	
+            "higherBound":5
         },
 
 };
